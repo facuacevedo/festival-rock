@@ -1,0 +1,54 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    font-family: $fuentePrincipal;
+    &.fijarBody{
+        overflow: hidden;//FIJAMOS EL BODY AL HACER SCROLL CUANDO ESTAMOS EN EL OVERLAY
+    }
+}
+
+/*TITULOS*/
+p{
+    font-size: 2rem;
+    color: $negro;
+}
+h1,h2,h3{
+    margin: 0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+/*UTILIDADES*/
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*EFECTO SCROLL*/

@@ -1,0 +1,26 @@
+.festival{
+    padding: $padding5 0;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:$padding5;
+    }
+}
+.contenidoFestival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2{
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    .fecha{
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: $semiDelgada;
+        color: $detalles;
+    }
+    .texto{
+        line-height: 1.5;
+    }
+}

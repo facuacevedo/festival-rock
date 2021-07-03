@@ -1,0 +1,66 @@
+.lineUp{
+    background-color: $detalles;
+    padding: $padding5 0;
+    h3,p{
+        text-align: center;
+        color: $blanco;
+        font-weight: $semiDelgada;
+    }
+    .dia{
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: $padding5 0;
+    }
+}
+.contenedorEscenario{
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+    }
+    .escenario{
+        padding-top: $padding5 / 2;
+    }
+    .nombreEscenario{
+        color: $negro;
+        &:after{
+            content:"";//siempre necesita un content, sino no funciona
+            width: 20rem;
+            height: 10rem;
+            display: block;
+            margin: 2rem auto 0 auto;//centrar el pseudoelemento
+            background-size: 100px;
+            background-repeat:no-repeat ;
+            background-position: center center;
+        }
+    }
+}
+.edm .nombreEscenario{
+    &:after{
+        background-image: url("/build/img/icono_edm.png");
+    }
+}
+.rock .nombreEscenario{
+    &:after{
+        background-image: url("/build/img/icono_rock.png");
+    }
+}
+.calendario{
+    li{
+        padding: $padding5 / 2;
+        font-weight: $gruesa;
+        text-transform: uppercase;
+        span{
+            font-weight: $semiDelgada;
+        }
+    }
+}
+//podemos usar odd q serian los impares o 2n+1 que seria lo mismo
+.bgVerde .calendario li:nth-child(odd){
+    background-color:darken($verde, 5) ;
+}
+//darken le agregar "oscuridad" a el color, como max 20 de 2do argumento, tirando a negro
+//lighten es como agregar "claridad" a el color, tirando a blanco
+.bgAmarillo .calendario li:nth-child(odd){
+    background-color:darken($beige, 5) ;
+}

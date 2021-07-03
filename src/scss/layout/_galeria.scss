@@ -1,0 +1,51 @@
+.galeria{
+    padding: $padding5 0;
+    h3{
+        text-align: center;
+        margin-bottom: $padding5;
+        text-transform: uppercase;
+        color: $detalles;
+        font-size: 4rem;
+        font-weight: $semiDelgada
+    }
+}
+.galeriaImagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    @include tablet{
+        grid-template-columns:repeat(4, 1fr);
+        gap: $padding5 / 3;
+    }
+    @include escritorio{
+        grid-template-columns:repeat(6, 1fr);
+        gap: $padding5 / 2;
+    }
+}
+.overlay{
+    position: fixed;//para q no se mueva al hacer scroll
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;//centramos el item con grid
+    img{
+        max-width: 90rem;
+    }
+    .botonCerrar{
+        color: $blanco;
+        font-size: 3rem;
+        font-weight: $semiDelgada;
+        display: grid;
+        place-items: center;//centramos la x con grid y esto
+        width: 4rem;
+        height: 4rem;
+        background-color: $detalles;
+        border-radius: 50%;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+

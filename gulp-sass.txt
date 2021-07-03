@@ -1,0 +1,31 @@
+GULP automatiza tareas que nadie quiere hacer
+un pipe en gulp es una accion que se ejecuta
+    luego otra y otra, el orden es definido por 
+    estas mismas
+SASS
+    CREACION de variales $nombre :"valor";
+        UTILIZACION $nombre;
+    ANIDACION siempre se hace dentro del primer selector "padre"
+    y al final de esos estilos de ese padre
+    .sass    esta anidacion es la que aprendi pero sin {}
+    .scss    esta anidacion es la que aprendi CON LAS {}
+    se compila y queda como un archivo css podemos hacer con WEBPACK O GULP
+    
+    para finalizar todas las tareas en la terminal ctrl+c
+    en layout guardaremos los archivos de los componentes, header, footer, etc
+    en base las variales, mixin, extends, etc
+
+    gulp series y parallel, series empieza 1 tarea y luego arranca otra
+        parallel hace en paralelo las tareas
+
+EN SASS EL ARCHIVO QUE NO TIENE _ SE COMPILA
+    el resto que tengo _ se compila sobre el qeu no tiene
+    exports.default es una "tarea" q al escribir unicamente gulp hara lo q le digamos
+
+ npm install --save-dev autoprefixer gulp-postcss gulp-sourcemaps cssnano
+    gulp-sass gulp-webp gulp-notify gulp-imagemin gulp-concat
+
+ALGUNAS HERRAMIENTAS PARA GULP
+
+    EN GULP EL ORDEN DE LOS PIPES SON IMPORTANTES
+    

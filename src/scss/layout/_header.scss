@@ -1,0 +1,40 @@
+.header{
+    background: $turquesa;
+
+    .contenidoHeader{
+        padding: $padding5 / 3 0;
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    h1{
+        text-align: center;
+        color: $blanco;
+        margin-bottom:1rem;
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+    //CUANDO EL HEADER TENGA ESTAS 2 CLASES JUNTAS
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .6rem .7rem rgba(0,0,0,0.6);
+    }
+}
+
+.navMenu{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    a{
+        color: $blanco;
+        font-size: 2rem;
+        font-weight:$semiDelgada;
+        &:hover{
+            color: $beige;
+        }
+    }
+}

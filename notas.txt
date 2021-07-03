@@ -1,0 +1,61 @@
+en GULP usamos require
+    creamos una const = require("nombre"); lo que buscamos dentrode esa "funcion"
+    lo buscara en node-modules
+    para buscar usamos destructiring
+    const {series} = require("gulp");
+
+    require es de node js importara algo de node modules a este archivo
+    luego para exporta usamos export."nombre" = "funcion o lo que queremos exportar";
+    de esta forma podremos usarlo en la terminal con la gulp "lo q exportamos"
+
+    para finalizar una funcion en gulp, usamos el parametro done dentro de las funciones
+    y se lo pasamos al final del contenido de la funcion, para decir que esta "finalizado"
+    asi 
+    function nombre (done){
+        console.log(asdasdasd);
+        done();
+    }
+    de esta forma se finaliza una funcion de gulp y no dara error
+    el series es una especie de funcion que recibe todos los argumentos que le demos
+    estos argumentos suelen ser las funcioens que creamos, sirve para que no estemos 
+    escribiendo 1 tarea a la vez, sino que pasemos por la terminal 1 sola "tarea"
+    por ejemplo, gulp series; este inicializara todas las tareas que tenga dentro de ella
+    la forma de guardarlas es asi
+    export.nombre = series(tarea1,tarea2,etc) dentro las funciones q tengamos
+    estas tareas se haran en el orden que esten "pasadas"
+    para que los haga en parallel, debemos pasar en el destructiring parallel, al lado de series
+    o parallel en vez de series
+
+    PARA NO TENER SELECTORES TAN GRANDES LO MEJOR ES PONERLO SOBRE 1 PADRE GENERAL, COMO MAXIMO 2
+    PARA ANIDAR PSEUDOCLASES USAMOS &
+    para crear un mixin, la palabra @mixin "nombre"("algun parametro"){}
+        para usarlos @include "nombre";
+        estos argumentos se usan como los de js, son similares a las varaibles, se usan de la misma forma
+        para usar los argumentos se usan asi 
+        @mixin "nombre"($transform,$color,$tamaño,etc);
+        @include "nombre"(uppercase/rojo/3rem,etc);
+        para crear un mixin dinamico como una mediquerie, dentro de la media le agregamos un @content
+        al llamarlo con include podemos usar {} y el contenido que querramos dentro
+
+en la etiqueta video, le podemos pasar controls, para poner play y pausar el vido, agrandar y etc
+        le podemos pasar muted, para mutear el sonido del video
+        loop para que el video sea un bucle, se reproduzca siempre
+        dentro de video tenemos q agregar una etiqueta <source src="">
+        este tiene un atributo type=video/"elformato";
+        esto se hace para agregar todos los tipos de formatos del video, ya q dependiendo cada navegador
+        va a soportar 1 o distintos tipos de formato de video
+
+
+    NO SE PUEDE PONER 1 EVENTO A UN OBJETO O MULTIPLES VARIABLES/SELECTORES
+        SOLO A 1 ELEMENTO
+    Interseccion Observer
+
+    para que nos funcione el postcss autoprefixer debemos crear un archivo llamado postcss.config.js
+    y exportar lo que tiene dentro a plugins
+
+AL HACER UN DEPLOY DE LA PAG
+SOLO SUBIR EL:
+    .index y demas archivos html
+    build
+    video(si existe esta carpeta)
+EL RESTO NO ES NECESARIO

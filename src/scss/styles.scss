@@ -1,0 +1,15 @@
+@import "base/normalize";//siempre primero normalize
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap ';//FUENTE importada
+@import "base/variables";//luego las variables
+@import "base/mixins";//antes de las varaibles para poder usarlas y despues de los globales para poder usar los mixins
+@import "base/globales";//luego los globales 
+@import "base/utilidades";
+
+@import "layout/header";
+@import "layout/video";
+@import "layout/festival";
+@import "layout/lineup";
+@import "layout/galeria";
+@import "layout/boletos";
+@import "layout/footer";
+

@@ -1,0 +1,19 @@
+@mixin nuevoMixin{
+    font-size: 3rem;
+}
+//ESTOS MIXINS PUEDO USARLO EN TODOS MIS PROYECTOS
+@mixin telefono {
+    @media screen and (min-width:$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width:$tablet) {
+        @content;
+    }
+}
+@mixin escritorio {
+    @media screen and (min-width:$escritorio) {
+        @content;
+    }
+}
